@@ -1,0 +1,21 @@
+/** @define allow-equals */
+.allow-equals {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__input-field {
+        margin-top: 0.6em;
+    }
+    &__label {
+        @include typeface(--paragraph-left-normal-black, none);
+        @include toEm(padding, 0 8px, 1.2em);
+        @include themify($themes) {
+            color: themed('text_color');
+        }
+        cursor: pointer;
+    }
+    &__tooltip {
+        margin-top: 1em;
+    }
+}
